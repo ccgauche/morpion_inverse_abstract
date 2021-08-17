@@ -1,0 +1,53 @@
+:root {
+  --cell-ref: min(100vh, 100vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 98%;
+  height: 98%;
+}
+body > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: calc(var(--cell-ref) / 7);
+}
+body > div > div > div {
+  width: calc(var(--cell-ref) / 7);
+  border: 1px solid #222;
+}
+
+.wall {
+  background-color: #222;
+}
+
+.blue {
+  background-color: #f35252;
+}
+
+.red {
+  background-color: #5552f3;
+}
+
+.playable {
+  background-color: #eedc79;
+}
